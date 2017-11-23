@@ -2,7 +2,7 @@ package timestamp
 
 import (
 	_ "unsafe"
-	"github.com/golang-ext/time.tmp/core"
+	"github.com/golang-ext/time/core"
 )
 
 //go:linkname parse core.timestamp_to_time

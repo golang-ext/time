@@ -1,6 +1,6 @@
 package timestamp
 
-import "github.com/golang-ext/time.tmp/core"
+import "github.com/golang-ext/time/core"
 
 const (
 	T_NanoSecond  = core.T_NanoSecond

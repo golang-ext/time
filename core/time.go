@@ -5,15 +5,6 @@ import (
 	"time"
 )
 
-// 重写原生 结构
-type Location time.Location
-type Time time.Time
-type Timer *time.Timer
-type Duration time.Duration
-type Ticker *time.Ticker
-type Month time.Month
-type Weekday time.Weekday
-
 //go:linkname time_parse core.time_parse
 func time_parse(s, layout string, local bool) (Time, error) {
 	if local {
@@ -70,6 +61,3 @@ func (t Time) Format(layout string) string {
 	return time.Time(t).Format(layout)
 }
 
-func (t Time) Add(d Duration) Time {
-	return Time(time.Time(t).Add(time.Duration(d)))
-}

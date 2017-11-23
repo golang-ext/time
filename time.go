@@ -2,7 +2,7 @@ package time
 
 import (
 	_ "unsafe"
-	"github.com/golang-ext/time.tmp/core"
+	"github.com/golang-ext/time/core"
 )
 
 // TODO: 原生结构重组

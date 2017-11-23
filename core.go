@@ -6,47 +6,47 @@ import (
 )
 
 var (
-	Local = core.Location(time.Local)
-	UTC   = core.Location(time.UTC)
+	Local = core.Local
+	UTC   = core.UTC
 )
 
 // time.Duration
 const (
-	Nanosecond  = core.Duration(time.Nanosecond)
-	Microsecond = core.Duration(time.Microsecond)
-	Millisecond = core.Duration(time.Millisecond)
-	Second      = core.Duration(time.Second)
-	Minute      = core.Duration(time.Minute)
-	Hour        = core.Duration(time.Hour)
-	Day         = Hour * 24
-	Week        = Day * 7
+	Nanosecond  = core.Nanosecond
+	Microsecond = core.Microsecond
+	Millisecond = core.Millisecond
+	Second      = core.Second
+	Minute      = core.Minute
+	Hour        = core.Hour
+	Day         = core.Day
+	Week        = core.Week
 )
 
 // time.WeekDay
 const (
-	Monday    = core.Weekday(time.Monday)
-	Tuesday   = core.Weekday(time.Tuesday)
-	Wednesday = core.Weekday(time.Wednesday)
-	Thursday  = core.Weekday(time.Thursday)
-	Friday    = core.Weekday(time.Friday)
-	Saturday  = core.Weekday(time.Saturday)
-	Sunday    = core.Weekday(time.Sunday)
+	Monday    = core.Monday
+	Tuesday   = core.Tuesday
+	Wednesday = core.Wednesday
+	Thursday  = core.Thursday
+	Friday    = core.Friday
+	Saturday  = core.Saturday
+	Sunday    = core.Sunday
 )
 
 // time.Month
 const (
-	January   = core.Month(time.January)
-	February  = core.Month(time.February)
-	March     = core.Month(time.March)
-	April     = core.Month(time.April)
-	May       = core.Month(time.May)
-	June      = core.Month(time.June)
-	July      = core.Month(time.July)
-	August    = core.Month(time.August)
-	September = core.Month(time.September)
-	October   = core.Month(time.October)
-	November  = core.Month(time.November)
-	December  = core.Month(time.December)
+	January   = core.January
+	February  = core.February
+	March     = core.March
+	April     = core.April
+	May       = core.May
+	June      = core.June
+	July      = core.July
+	August    = core.August
+	September = core.September
+	October   = core.October
+	November  = core.November
+	December  = core.December
 )
 
 // time.layout
