@@ -1,8 +1,8 @@
 package time
 
 import (
-	_ "unsafe"
 	"github.com/golang-ext/time/core"
+	_ "unsafe"
 )
 
 //go:linkname parse core.time_parse

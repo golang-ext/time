@@ -1,8 +1,8 @@
 package time
 
 import (
-	"time"
 	"github.com/golang-ext/time/core"
+	"time"
 )
 
 var (

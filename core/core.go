@@ -1,8 +1,8 @@
 package core
 
 import (
-	_ "unsafe"
 	"time"
+	_ "unsafe"
 )
 
 // 重写原生 结构
@@ -117,12 +117,126 @@ func date(year int, month Month, day, hour, min, sec, nsec int, loc *Location) T
 }
 
 func (t Time) String() string {
-	return t.Format("2006-01-02 15:04:05.999999999 -0700 MST")
+	return time.Time(t).String()
 }
 func (t Time) Add(d Duration) Time {
 	return Time(time.Time(t).Add(time.Duration(d)))
 }
+func (t Time) Sub(u Time) Duration {
+	return Duration(time.Time(t).Sub(time.Time(u)))
+}
+func (t Time) Date() (int, Month, int) {
+	y, m, d := time.Time(t).Date()
+	return y, Month(m), d
+}
+func (t Time) Day() int {
+	return time.Time(t).Day()
+}
+func (t Time) Month() Month {
+	return Month(time.Time(t).Month())
+}
+func (t Time) Year() int {
+	return time.Time(t).Year()
+}
+func (t Time) Hour() int {
+	return time.Time(t).Hour()
+}
+func (t Time) Minute() int {
+	return time.Time(t).Minute()
+}
+func (t Time) Second() int {
+	return time.Time(t).Second()
+}
+func (t Time) YearDay() int {
+	return time.Time(t).YearDay()
+}
+func (t Time) Location() *Location {
+	return (*Location)(time.Time(t).Location())
+}
+func (t Time) Local() Time {
+	return Time(time.Time(t).Local())
+}
+func (t Time) UTC() Time {
+	return Time(time.Time(t).UTC())
+}
+func (t Time) Weekday() Weekday {
+	return Weekday(time.Time(t).Weekday())
+}
+func (t Time) AddDate(years, months, days int) Time {
+	return Time(time.Time(t).AddDate(years, months, days))
+}
+func (t Time) AppendFormat(b []byte, layout string) []byte {
+	return time.Time(t).AppendFormat(b, layout)
+}
+func (t Time) After(u Time) bool {
+	return time.Time(t).After(time.Time(u))
+}
+func (t Time) Before(u Time) bool {
+	return time.Time(t).Before(time.Time(u))
+}
+func (t Time) Clock() (int, int, int) {
+	return time.Time(t).Clock()
+}
+func (t Time) GobDecode(data []byte) error {
+	return time.Time(t).GobDecode(data)
+}
+func (t Time) GobEncode() ([]byte, error) {
+	return time.Time(t).GobEncode()
+}
+func (t Time) Equal(u Time) bool {
+	return time.Time(t).Equal(time.Time(u))
+}
+func (t Time) In(loc *Location) Time {
+	return Time(time.Time(t).In((*time.Location)(loc)))
+}
+func (t Time) IsZero() bool {
+	return time.Time(t).IsZero()
+}
+func (t Time) ISOWeek() (int, int) {
+	return time.Time(t).ISOWeek()
+}
+func (t Time) MarshalBinary() ([]byte, error) {
+	return time.Time(t).MarshalBinary()
+}
+func (t Time) MarshalJSON() ([]byte, error) {
+	return time.Time(t).MarshalJSON()
+}
+func (t Time) MarshalText() ([]byte, error) {
+	return time.Time(t).MarshalText()
+}
+func (t Time) UnmarshalBinary(data []byte) error {
+	return time.Time(t).UnmarshalBinary(data)
+}
+func (t Time) UnmarshalJSON(data []byte) error {
+	return time.Time(t).UnmarshalJSON(data)
+}
+func (t Time) UnmarshalText(data []byte) error {
+	return time.Time(t).UnmarshalText(data)
+}
+func (t Time) Round(d Duration) Time {
+	return Time(time.Time(t).Round(time.Duration(d)))
+}
+func (t Time) Zone() (string, int) {
+	return time.Time(t).Zone()
+}
+func (t Time) Nanosecond() int {
+	return time.Time(t).Nanosecond()
+}
+func (t Time) Truncate(d Duration) Time {
+	return Time(time.Time(t).Truncate(time.Duration(d)))
+}
 
 func (l *Location) String() string {
 	return (*time.Location)(l).String()
+}
+
+func (t Timer) Reset(d Duration) bool {
+	return time.Timer(t).Reset(time.Duration(d))
+}
+func (t Timer) Stop() bool {
+	return time.Timer(t).Stop()
+}
+
+func (d Duration) String() string {
+	return time.Duration(d).String()
 }

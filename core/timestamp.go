@@ -1,6 +1,9 @@
 package core
 
-import _ "unsafe"
+import (
+	_ "unsafe"
+	"fmt"
+)
 
 type TimestampType uint
 type Timestamp int64
@@ -68,4 +71,22 @@ func (timestamp Timestamp) Format(layout string, _type TimestampType) string {
 	default:
 		return unix(int64(timestamp), 0).Format(layout)
 	}
+}
+
+/**
+ * TODO: 时间戳相加
+ * @param timestamp
+ * @return int64
+ */
+func (timestamp Timestamp) Add(_t Timestamp) int64 {
+	return int64(timestamp) + int64(_t)
+}
+
+/**
+ * TODO: 时间戳相减
+ * @param timestamp
+ * @return int64
+ */
+func (timestamp Timestamp) Sub(_t Timestamp) int64 {
+	return int64(timestamp) - int64(_t)
 }

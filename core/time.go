@@ -1,8 +1,8 @@
 package core
 
 import (
-	_ "unsafe"
 	"time"
+	_ "unsafe"
 )
 
 //go:linkname time_parse core.time_parse
@@ -60,4 +60,3 @@ func (t Time) Unix() Timestamp {
 func (t Time) Format(layout string) string {
 	return time.Time(t).Format(layout)
 }
-
