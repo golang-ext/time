@@ -87,5 +87,5 @@ func (timestamp Timestamp) Add(_t Timestamp) int64 {
  * @return int64
  */
 func (timestamp Timestamp) Sub(_t Timestamp) int64 {
-	return int64(timestamp) - int64(_t)
+	return int64(timestamp - _t)
 }
